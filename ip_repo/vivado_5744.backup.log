@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Mon Apr 10 06:36:00 2017
+# Process ID: 5744
+# Current directory: C:/axis_tut/ip_repo
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4436 C:\axis_tut\ip_repo\edit_test_pattern_generator_v1_0.xpr
+# Log file: C:/axis_tut/ip_repo/vivado.log
+# Journal file: C:/axis_tut/ip_repo\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/axis_tut/ip_repo/edit_test_pattern_generator_v1_0.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/axis_tut/ip_repo/test_pattern_generator_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.4/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:05 . Memory (MB): peak = 739.336 ; gain = 96.836
+ipx::package_project -root_dir C:/axis_tut/ip_repo/test_pattern_generator_1.0 -vendor xilinx.com -library user -taxonomy /UserIP -force
+INFO: [IP_Flow 19-2228] Inferred bus interface "m00_axis" of definition type "xilinx.com:interface:axis:1.0".
+INFO: [IP_Flow 19-2228] Inferred bus interface "aresetn" of definition type "xilinx.com:signal:reset:1.0".
+INFO: [IP_Flow 19-2228] Inferred bus interface "aclk" of definition type "xilinx.com:signal:clock:1.0".
+INFO: [IP_Flow 19-2228] Inferred bus interface "aresetn" of definition type "xilinx.com:signal:reset:1.0".
+INFO: [IP_Flow 19-2228] Inferred bus interface "aclk" of definition type "xilinx.com:signal:clock:1.0".
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 10 06:58:36 2017...

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Thu Mar 02 08:33:26 2017
+# Process ID: 2612
+# Current directory: C:/g/hdmi_out/proj
+# Command line: wbtcv.exe -mode batch -source C:/g/video_ip/vga_color_test/vga_color_test.hw/webtalk/labtool_webtalk.tcl -notrace
+# Log file: C:/g/hdmi_out/proj/webtalk.log
+# Journal file: C:/g/hdmi_out/proj\webtalk.jou
+#-----------------------------------------------------------
+source C:/g/video_ip/vga_color_test/vga_color_test.hw/webtalk/labtool_webtalk.tcl -notrace

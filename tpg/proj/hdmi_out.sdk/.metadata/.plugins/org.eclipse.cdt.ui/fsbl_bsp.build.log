@@ -1,0 +1,6 @@
+09:45:59 **** Build of project fsbl_bsp ****
+make -k all 
+'Finished building libraries'
+
+09:45:59 Build Finished (took 172ms)
+

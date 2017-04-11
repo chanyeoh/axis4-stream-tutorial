@@ -1,0 +1,44 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Sun Apr 02 00:01:50 2017
+# Process ID: 7560
+# Current directory: C:/g/hdmi_out/proj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1424 C:\g\hdmi_out\proj\hdmi_out.xpr
+# Log file: C:/g/hdmi_out/proj/vivado.log
+# Journal file: C:/g/hdmi_out/proj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/g/hdmi_out/proj/hdmi_out.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/g/hdmi_out/repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.4/data/ip'.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'hdmi_out.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+hdmi_out_inverse_color_v1_0_0_0
+
+open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:14 . Memory (MB): peak = 860.531 ; gain = 200.414
+open_bd_design {C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd}
+Adding component instance block -- digilentinc.com:ip:axi_dynclk:1.0 - axi_dynclk_0
+Adding component instance block -- digilentinc.com:ip:rgb2dvi:1.2 - rgb2dvi_0
+Adding component instance block -- xilinx.com:ip:v_axi4s_vid_out:4.0 - v_axi4s_vid_out_0
+Adding component instance block -- xilinx.com:ip:v_tc:6.1 - v_tc_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_1
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_hdmi
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:user:myip_test1_v1_0:1.0 - myip_test1_v1_0_0
+Adding component instance block -- xilinx.com:user:inverse_color_v1_0:1.0 - inverse_color_v1_0_0
+Adding component instance block -- xilinx.com:ip:v_rgb2ycrcb:7.1 - v_rgb2ycrcb_0
+Adding component instance block -- xilinx.com:ip:v_ycrcb2rgb:7.1 - v_ycrcb2rgb_0
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <hdmi_out> from BD file <C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd>
+open_bd_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:15 . Memory (MB): peak = 1041.934 ; gain = 181.402
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Apr 02 00:03:32 2017...

@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Sun Apr 02 00:01:50 2017
+# Process ID: 7560
+# Current directory: C:/g/hdmi_out/proj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1424 C:\g\hdmi_out\proj\hdmi_out.xpr
+# Log file: C:/g/hdmi_out/proj/vivado.log
+# Journal file: C:/g/hdmi_out/proj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/g/hdmi_out/proj/hdmi_out.xpr
+open_bd_design {C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd}

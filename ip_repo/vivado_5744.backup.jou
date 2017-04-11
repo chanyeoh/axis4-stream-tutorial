@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Mon Apr 10 06:36:00 2017
+# Process ID: 5744
+# Current directory: C:/axis_tut/ip_repo
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4436 C:\axis_tut\ip_repo\edit_test_pattern_generator_v1_0.xpr
+# Log file: C:/axis_tut/ip_repo/vivado.log
+# Journal file: C:/axis_tut/ip_repo\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/axis_tut/ip_repo/edit_test_pattern_generator_v1_0.xpr
+ipx::package_project -root_dir C:/axis_tut/ip_repo/test_pattern_generator_1.0 -vendor xilinx.com -library user -taxonomy /UserIP -force

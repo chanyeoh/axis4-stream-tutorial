@@ -1,0 +1,463 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Thu Mar 02 08:37:16 2017
+# Process ID: 10184
+# Current directory: C:/g/hdmi_out/proj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10884 C:\g\hdmi_out\proj\hdmi_out.xpr
+# Log file: C:/g/hdmi_out/proj/vivado.log
+# Journal file: C:/g/hdmi_out/proj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/g/hdmi_out/proj/hdmi_out.xpr
+open_bd_design {C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd}
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+set_property location {6 1813 1105} [get_bd_cells axi_gpio_led]
+delete_bd_objs [get_bd_intf_nets processing_system7_0_axi_periph_M00_AXI] [get_bd_intf_nets axi_gpio_led_GPIO] [get_bd_cells axi_gpio_led]
+delete_bd_objs [get_bd_intf_nets processing_system7_0_axi_periph_M01_AXI] [get_bd_intf_nets axi_gpio_0_GPIO] [get_bd_cells axi_gpio_btn]
+delete_bd_objs [get_bd_intf_nets processing_system7_0_axi_periph_M02_AXI] [get_bd_intf_nets axi_gpio_0_GPIO1] [get_bd_cells axi_gpio_sw]
+delete_bd_objs [get_bd_intf_ports sws_4bits]
+delete_bd_objs [get_bd_intf_ports btns_4bits]
+delete_bd_objs [get_bd_intf_ports leds_4bits]
+delete_bd_objs [get_bd_intf_nets processing_system7_0_axi_periph_M03_AXI]
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins processing_system7_0_axi_periph/M00_AXI] [get_bd_intf_pins v_tc_0/ctrl]
+delete_bd_objs [get_bd_intf_nets processing_system7_0_axi_periph_M04_AXI]
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins processing_system7_0_axi_periph/M01_AXI] [get_bd_intf_pins axi_dynclk_0/s00_axi]
+delete_bd_objs [get_bd_intf_nets processing_system7_0_axi_periph_M05_AXI]
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins processing_system7_0_axi_periph/M02_AXI] [get_bd_intf_pins axi_vdma_0/S_AXI_LITE]
+delete_bd_objs [get_bd_intf_nets processing_system7_0_axi_periph_M06_AXI]
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins processing_system7_0_axi_periph/M03_AXI] [get_bd_intf_pins axi_gpio_hdmi/S_AXI]
+reset_run synth_1
+startgroup
+set_property -dict [list CONFIG.NUM_MI {4}] [get_bd_cells processing_system7_0_axi_periph]
+endgroup
+remove_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdl/hdmi_out_wrapper.vhd
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+save_bd_design
+reset_target all [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd]
+export_ip_user_files -of_objects  [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -sync -no_script -force -quiet
+generate_target all [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd]
+export_ip_user_files -of_objects [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -no_script -force -quiet
+export_simulation -of_objects [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -directory C:/g/hdmi_out/proj/hdmi_out.ip_user_files/sim_scripts -force -quiet
+assign_bd_address
+generate_target all [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd]
+export_ip_user_files -of_objects [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -no_script -force -quiet
+export_simulation -of_objects [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -directory C:/g/hdmi_out/proj/hdmi_out.ip_user_files/sim_scripts -force -quiet
+make_wrapper -files [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -top
+add_files -norecurse C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdl/hdmi_out_wrapper.vhd
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+file mkdir C:/g/hdmi_out/proj/hdmi_out.sdk
+file copy -force C:/g/hdmi_out/proj/hdmi_out.runs/impl_1/hdmi_out_wrapper.sysdef C:/g/hdmi_out/proj/hdmi_out.sdk/hdmi_out_wrapper.hdf
+
+launch_sdk -workspace C:/g/hdmi_out/proj/hdmi_out.sdk -hwspec C:/g/hdmi_out/proj/hdmi_out.sdk/hdmi_out_wrapper.hdf
+launch_sdk -workspace C:/g/hdmi_out/proj/hdmi_out.sdk -hwspec C:/g/hdmi_out/proj/hdmi_out.sdk/hdmi_out_wrapper.hdf
+delete_bd_objs [get_bd_intf_nets axis_subset_converter_0_M_AXIS]
+set_property  ip_repo_paths  {c:/g/hdmi_out/repo C:/ip_repo} [current_project]
+update_ip_catalog
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:inverse_color_v1_0:1.0 inverse_color_v1_0_0
+endgroup
+set_property location {4 1058 208} [get_bd_cells inverse_color_v1_0_0]
+startgroup
+set_property -dict [list CONFIG.C_S00_AXIS_TDATA_WIDTH {24} CONFIG.C_M00_AXIS_TDATA_WIDTH {24}] [get_bd_cells inverse_color_v1_0_0]
+endgroup
+connect_bd_intf_net [get_bd_intf_pins axis_subset_converter_0/M_AXIS] [get_bd_intf_pins inverse_color_v1_0_0/s00_axis]
+connect_bd_intf_net [get_bd_intf_pins inverse_color_v1_0_0/m00_axis] [get_bd_intf_pins v_axi4s_vid_out_0/video_in]
+connect_bd_net [get_bd_pins inverse_color_v1_0_0/aclk] [get_bd_pins processing_system7_0/FCLK_CLK1]
+connect_bd_net [get_bd_pins inverse_color_v1_0_0/aclken] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins inverse_color_v1_0_0/aresetn] [get_bd_pins xlconstant_1/dout]
+save_bd_design
+reset_target all [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd]
+export_ip_user_files -of_objects  [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -sync -no_script -force -quiet
+generate_target all [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd]
+export_ip_user_files -of_objects [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -no_script -force -quiet
+export_simulation -of_objects [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -directory C:/g/hdmi_out/proj/hdmi_out.ip_user_files/sim_scripts -force -quiet
+make_wrapper -files [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -top
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+file copy -force C:/g/hdmi_out/proj/hdmi_out.runs/impl_1/hdmi_out_wrapper.sysdef C:/g/hdmi_out/proj/hdmi_out.sdk/hdmi_out_wrapper.hdf
+
+launch_sdk -workspace C:/g/hdmi_out/proj/hdmi_out.sdk -hwspec C:/g/hdmi_out/proj/hdmi_out.sdk/hdmi_out_wrapper.hdf
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+delete_bd_objs [get_bd_intf_nets inverse_color_v1_0_0_m00_axis] [get_bd_intf_nets axis_subset_converter_0_M_AXIS] [get_bd_cells inverse_color_v1_0_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:inverse_color_v1_0:1.0 inverse_color_v1_0_0
+endgroup
+report_ip_status -name ip_status 
+connect_bd_intf_net [get_bd_intf_pins axis_subset_converter_0/M_AXIS] [get_bd_intf_pins inverse_color_v1_0_0/s00_axis]
+startgroup
+set_property -dict [list CONFIG.C_S00_AXIS_TDATA_WIDTH {24} CONFIG.C_M00_AXIS_TDATA_WIDTH {24}] [get_bd_cells inverse_color_v1_0_0]
+endgroup
+connect_bd_net [get_bd_pins inverse_color_v1_0_0/aclk] [get_bd_pins processing_system7_0/FCLK_CLK1]
+connect_bd_net [get_bd_pins inverse_color_v1_0_0/aclken] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins inverse_color_v1_0_0/aresetn] [get_bd_pins xlconstant_1/dout]
+connect_bd_intf_net [get_bd_intf_pins inverse_color_v1_0_0/m00_axis] [get_bd_intf_pins v_axi4s_vid_out_0/video_in]
+save_bd_design
+reset_target all [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd]
+export_ip_user_files -of_objects  [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -sync -no_script -force -quiet
+generate_target all [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd]
+export_ip_user_files -of_objects [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -no_script -force -quiet
+export_simulation -of_objects [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -directory C:/g/hdmi_out/proj/hdmi_out.ip_user_files/sim_scripts -force -quiet
+make_wrapper -files [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -top
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+file copy -force C:/g/hdmi_out/proj/hdmi_out.runs/impl_1/hdmi_out_wrapper.sysdef C:/g/hdmi_out/proj/hdmi_out.sdk/hdmi_out_wrapper.hdf
+
+launch_sdk -workspace C:/g/hdmi_out/proj/hdmi_out.sdk -hwspec C:/g/hdmi_out/proj/hdmi_out.sdk/hdmi_out_wrapper.hdf
+delete_bd_objs [get_bd_intf_nets inverse_color_v1_0_0_m00_axis] [get_bd_intf_nets axis_subset_converter_0_M_AXIS] [get_bd_cells inverse_color_v1_0_0]
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:inverse_color_v1_0:1.0 inverse_color_v1_0_0
+endgroup
+set_property location {4 1113 102} [get_bd_cells inverse_color_v1_0_0]
+connect_bd_intf_net [get_bd_intf_pins axis_subset_converter_0/M_AXIS] [get_bd_intf_pins inverse_color_v1_0_0/s00_axis]
+startgroup
+set_property -dict [list CONFIG.C_S00_AXIS_TDATA_WIDTH {24} CONFIG.C_M00_AXIS_TDATA_WIDTH {24}] [get_bd_cells inverse_color_v1_0_0]
+endgroup
+connect_bd_intf_net [get_bd_intf_pins inverse_color_v1_0_0/m00_axis] [get_bd_intf_pins v_axi4s_vid_out_0/video_in]
+connect_bd_net [get_bd_pins inverse_color_v1_0_0/aclk] [get_bd_pins processing_system7_0/FCLK_CLK1]
+connect_bd_net [get_bd_pins inverse_color_v1_0_0/aclken] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins inverse_color_v1_0_0/aresetn] [get_bd_pins xlconstant_1/dout]
+reset_target all [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd]
+export_ip_user_files -of_objects  [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -sync -no_script -force -quiet
+generate_target all [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd]
+export_ip_user_files -of_objects [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -no_script -force -quiet
+export_simulation -of_objects [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -directory C:/g/hdmi_out/proj/hdmi_out.ip_user_files/sim_scripts -force -quiet
+make_wrapper -files [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -top
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+file copy -force C:/g/hdmi_out/proj/hdmi_out.runs/impl_1/hdmi_out_wrapper.sysdef C:/g/hdmi_out/proj/hdmi_out.sdk/hdmi_out_wrapper.hdf
+
+launch_sdk -workspace C:/g/hdmi_out/proj/hdmi_out.sdk -hwspec C:/g/hdmi_out/proj/hdmi_out.sdk/hdmi_out_wrapper.hdf
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+delete_bd_objs [get_bd_intf_nets axis_subset_converter_0_M_AXIS] [get_bd_intf_nets inverse_color_v1_0_0_m00_axis] [get_bd_cells inverse_color_v1_0_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:inverse_color_v1_0:1.0 inverse_color_v1_0_0
+endgroup
+report_ip_status -name ip_status 
+set_property location {4 1130 126} [get_bd_cells inverse_color_v1_0_0]
+connect_bd_intf_net [get_bd_intf_pins inverse_color_v1_0_0/m00_axis] [get_bd_intf_pins v_axi4s_vid_out_0/video_in]
+connect_bd_intf_net [get_bd_intf_pins inverse_color_v1_0_0/s00_axis] [get_bd_intf_pins axis_subset_converter_0/M_AXIS]
+connect_bd_net [get_bd_pins inverse_color_v1_0_0/aclk] [get_bd_pins processing_system7_0/FCLK_CLK1]
+connect_bd_net [get_bd_pins inverse_color_v1_0_0/aclken] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins inverse_color_v1_0_0/aresetn] [get_bd_pins xlconstant_1/dout]
+reset_target all [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd]
+export_ip_user_files -of_objects  [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -sync -no_script -force -quiet
+generate_target all [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd]
+export_ip_user_files -of_objects [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -no_script -force -quiet
+export_simulation -of_objects [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -directory C:/g/hdmi_out/proj/hdmi_out.ip_user_files/sim_scripts -force -quiet
+startgroup
+set_property -dict [list CONFIG.C_S00_AXIS_TDATA_WIDTH {24} CONFIG.C_M00_AXIS_TDATA_WIDTH {24}] [get_bd_cells inverse_color_v1_0_0]
+endgroup
+reset_target all [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd]
+export_ip_user_files -of_objects  [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -sync -no_script -force -quiet
+generate_target all [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd]
+export_ip_user_files -of_objects [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -no_script -force -quiet
+export_simulation -of_objects [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -directory C:/g/hdmi_out/proj/hdmi_out.ip_user_files/sim_scripts -force -quiet
+make_wrapper -files [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -top
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+file copy -force C:/g/hdmi_out/proj/hdmi_out.runs/impl_1/hdmi_out_wrapper.sysdef C:/g/hdmi_out/proj/hdmi_out.sdk/hdmi_out_wrapper.hdf
+
+launch_sdk -workspace C:/g/hdmi_out/proj/hdmi_out.sdk -hwspec C:/g/hdmi_out/proj/hdmi_out.sdk/hdmi_out_wrapper.hdf
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+open_bd_design {C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd}
+startgroup
+set_property -dict [list CONFIG.VIDEO_MODE {480p} CONFIG.GEN_F0_VSYNC_VSTART {488} CONFIG.GEN_F1_VSYNC_VSTART {488} CONFIG.GEN_HACTIVE_SIZE {720} CONFIG.GEN_HSYNC_END {798} CONFIG.GEN_HFRAME_SIZE {858} CONFIG.GEN_F0_VSYNC_HSTART {720} CONFIG.GEN_F1_VSYNC_HSTART {720} CONFIG.GEN_F0_VSYNC_HEND {720} CONFIG.GEN_F1_VSYNC_HEND {720} CONFIG.GEN_F0_VFRAME_SIZE {525} CONFIG.GEN_F1_VFRAME_SIZE {525} CONFIG.GEN_F0_VSYNC_VEND {494} CONFIG.GEN_F1_VSYNC_VEND {494} CONFIG.GEN_F0_VBLANK_HEND {720} CONFIG.GEN_F1_VBLANK_HEND {720} CONFIG.GEN_HSYNC_START {736} CONFIG.GEN_VACTIVE_SIZE {480} CONFIG.GEN_F0_VBLANK_HSTART {720} CONFIG.GEN_F1_VBLANK_HSTART {720}] [get_bd_cells v_tc_0]
+endgroup
+delete_bd_objs [get_bd_intf_nets inverse_color_v1_0_0_m00_axis] [get_bd_intf_nets axis_subset_converter_0_M_AXIS] [get_bd_cells inverse_color_v1_0_0]
+delete_bd_objs [get_bd_intf_nets axi_vdma_0_M_AXIS_MM2S] [get_bd_nets xlconstant_1_dout] [get_bd_cells axis_subset_converter_0]
+delete_bd_objs [get_bd_intf_nets axi_vdma_0_M_AXI_MM2S] [get_bd_nets axi_vdma_0_mm2s_introut] [get_bd_intf_nets processing_system7_0_axi_periph_M02_AXI] [get_bd_cells axi_vdma_0]
+delete_bd_objs [get_bd_intf_nets axi_mem_intercon_M00_AXI] [get_bd_nets rst_processing_system7_0_150M_interconnect_aresetn] [get_bd_nets rst_processing_system7_0_150M_peripheral_aresetn] [get_bd_cells axi_mem_intercon]
+delete_bd_objs [get_bd_cells proc_sys_reset_1]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:myip_test:1.0 myip_test_0
+endgroup
+delete_bd_objs [get_bd_cells myip_test_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:myip_test1_v1_0:1.0 myip_test1_v1_0_0
+endgroup
+set_property location {4 1163 331} [get_bd_cells myip_test1_v1_0_0]
+connect_bd_intf_net [get_bd_intf_pins myip_test1_v1_0_0/m00_axis] [get_bd_intf_pins v_axi4s_vid_out_0/video_in]
+connect_bd_net [get_bd_pins myip_test1_v1_0_0/aclk] [get_bd_pins processing_system7_0/FCLK_CLK1]
+set_property location {3 789 370} [get_bd_cells xlconstant_1]
+connect_bd_net [get_bd_pins xlconstant_1/dout] [get_bd_pins myip_test1_v1_0_0/aclken]
+connect_bd_net [get_bd_pins myip_test1_v1_0_0/aresetn] [get_bd_pins xlconstant_1/dout]
+validate_bd_design
+delete_bd_objs [get_bd_nets v_tc_0_irq] [get_bd_nets xlconcat_0_dout] [get_bd_nets axi_gpio_0_ip2intc_irpt] [get_bd_cells xlconcat_0]
+startgroup
+set_property -dict [list CONFIG.C_M00_AXIS_TDATA_WIDTH {24}] [get_bd_cells myip_test1_v1_0_0]
+endgroup
+validate_bd_design
+reset_target all [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd]
+export_ip_user_files -of_objects  [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -sync -no_script -force -quiet
+generate_target all [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd]
+export_ip_user_files -of_objects [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -no_script -force -quiet
+export_simulation -of_objects [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -directory C:/g/hdmi_out/proj/hdmi_out.ip_user_files/sim_scripts -force -quiet
+make_wrapper -files [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -top
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/g/hdmi_out/proj/hdmi_out.runs/impl_1/hdmi_out_wrapper.bit} [lindex [get_hw_devices] 1]
+current_hw_device [lindex [get_hw_devices] 1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 1]
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {C:/g/hdmi_out/proj/hdmi_out.runs/impl_1/hdmi_out_wrapper.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+refresh_hw_device [lindex [get_hw_devices] 1]
+open_bd_design {C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd}
+undo
+undo
+undo
+regenerate_bd_layout
+save_bd_design
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:v_vid_in_axi4s:4.0 v_vid_in_axi4s_0
+endgroup
+delete_bd_objs [get_bd_cells v_vid_in_axi4s_0]
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+delete_bd_objs [get_bd_intf_nets myip_test1_v1_0_0_m00_axis] [get_bd_nets xlconstant_1_dout] [get_bd_cells myip_test1_v1_0_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:myip_test1_v1_0:1.0 myip_test1_v1_0_0
+endgroup
+set_property location {3 838 732} [get_bd_cells myip_test1_v1_0_0]
+connect_bd_intf_net [get_bd_intf_pins myip_test1_v1_0_0/m00_axis] [get_bd_intf_pins v_axi4s_vid_out_0/video_in]
+connect_bd_net [get_bd_pins xlconstant_1/dout] [get_bd_pins myip_test1_v1_0_0/aclk]
+delete_bd_objs [get_bd_nets xlconstant_1_dout]
+connect_bd_net [get_bd_pins xlconstant_1/dout] [get_bd_pins myip_test1_v1_0_0/aresetn]
+connect_bd_net [get_bd_pins myip_test1_v1_0_0/aclken] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins myip_test1_v1_0_0/aclk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+save_bd_design
+reset_target all [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd]
+export_ip_user_files -of_objects  [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -sync -no_script -force -quiet
+generate_target all [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd]
+delete_bd_objs [get_bd_intf_nets myip_test1_v1_0_0_m00_axis] [get_bd_nets xlconstant_1_dout] [get_bd_cells myip_test1_v1_0_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:myip_test1_v1_0:1.0 myip_test1_v1_0_0
+endgroup
+set_property location {3 795 739} [get_bd_cells myip_test1_v1_0_0]
+connect_bd_intf_net [get_bd_intf_pins myip_test1_v1_0_0/m00_axis] [get_bd_intf_pins v_axi4s_vid_out_0/video_in]
+connect_bd_net [get_bd_pins myip_test1_v1_0_0/aclk] [get_bd_pins processing_system7_0/FCLK_CLK1]
+connect_bd_net [get_bd_pins xlconstant_1/dout] [get_bd_pins myip_test1_v1_0_0/aclken]
+connect_bd_net [get_bd_pins myip_test1_v1_0_0/aresetn] [get_bd_pins xlconstant_1/dout]
+save_bd_design
+startgroup
+set_property -dict [list CONFIG.C_M00_AXIS_TDATA_WIDTH {24}] [get_bd_cells myip_test1_v1_0_0]
+endgroup
+save_bd_design
+generate_target all [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd]
+export_ip_user_files -of_objects [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -no_script -force -quiet
+export_simulation -of_objects [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -directory C:/g/hdmi_out/proj/hdmi_out.ip_user_files/sim_scripts -force -quiet
+make_wrapper -files [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -top
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+regenerate_bd_layout
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {C:/g/hdmi_out/proj/hdmi_out.runs/impl_1/hdmi_out_wrapper.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+refresh_hw_device [lindex [get_hw_devices] 1]
+save_bd_design
+file copy -force C:/g/hdmi_out/proj/hdmi_out.runs/impl_1/hdmi_out_wrapper.sysdef C:/g/hdmi_out/proj/hdmi_out.sdk/hdmi_out_wrapper.hdf
+
+launch_sdk -workspace C:/g/hdmi_out/proj/hdmi_out.sdk -hwspec C:/g/hdmi_out/proj/hdmi_out.sdk/hdmi_out_wrapper.hdf
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {C:/g/hdmi_out/proj/hdmi_out.runs/impl_1/hdmi_out_wrapper.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+refresh_hw_device [lindex [get_hw_devices] 1]
+open_bd_design {C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd}
+file copy -force C:/g/hdmi_out/proj/hdmi_out.runs/impl_1/hdmi_out_wrapper.sysdef C:/g/hdmi_out/proj/hdmi_out.sdk/hdmi_out_wrapper.hdf
+
+launch_sdk -workspace C:/g/hdmi_out/proj/hdmi_out.sdk -hwspec C:/g/hdmi_out/proj/hdmi_out.sdk/hdmi_out_wrapper.hdf
+make_wrapper -files [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -top
+reset_target all [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd]
+export_ip_user_files -of_objects  [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -sync -no_script -force -quiet
+generate_target all [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd]
+export_ip_user_files -of_objects [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -no_script -force -quiet
+export_simulation -of_objects [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -directory C:/g/hdmi_out/proj/hdmi_out.ip_user_files/sim_scripts -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_bd_design {C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd}
+delete_bd_objs [get_bd_intf_nets myip_test1_v1_0_0_m00_axis]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:v_ycrcb2rgb:7.1 v_ycrcb2rgb_0
+endgroup
+set_property location {5 1249 751} [get_bd_cells v_ycrcb2rgb_0]
+connect_bd_intf_net [get_bd_intf_pins myip_test1_v1_0_0/m00_axis] [get_bd_intf_pins v_ycrcb2rgb_0/video_in]
+set_property location {4 1273 742} [get_bd_cells v_ycrcb2rgb_0]
+set_property location {4 1257 733} [get_bd_cells v_ycrcb2rgb_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:v_rgb2ycrcb:7.1 v_rgb2ycrcb_0
+endgroup
+set_property location {5 1490 532} [get_bd_cells v_rgb2ycrcb_0]
+connect_bd_intf_net [get_bd_intf_pins v_ycrcb2rgb_0/video_out] [get_bd_intf_pins v_rgb2ycrcb_0/video_in]
+connect_bd_net [get_bd_pins v_rgb2ycrcb_0/aclk] [get_bd_pins processing_system7_0/FCLK_CLK1]
+connect_bd_net [get_bd_pins v_ycrcb2rgb_0/aclk] [get_bd_pins processing_system7_0/FCLK_CLK1]
+connect_bd_net [get_bd_pins v_ycrcb2rgb_0/aclken] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins v_ycrcb2rgb_0/aresetn] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins v_rgb2ycrcb_0/aclken] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins v_rgb2ycrcb_0/aresetn] [get_bd_pins xlconstant_1/dout]
+connect_bd_intf_net [get_bd_intf_pins v_rgb2ycrcb_0/video_out] [get_bd_intf_pins v_axi4s_vid_out_0/video_in]
+save_bd_design
+reset_target all [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd]
+export_ip_user_files -of_objects  [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -sync -no_script -force -quiet
+generate_target all [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd]
+export_ip_user_files -of_objects [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -no_script -force -quiet
+export_simulation -of_objects [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -directory C:/g/hdmi_out/proj/hdmi_out.ip_user_files/sim_scripts -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+make_wrapper -files [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -top
+report_ip_status -name ip_status 
+make_wrapper -files [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -top
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+file copy -force C:/g/hdmi_out/proj/hdmi_out.runs/impl_1/hdmi_out_wrapper.sysdef C:/g/hdmi_out/proj/hdmi_out.sdk/hdmi_out_wrapper.hdf
+
+launch_sdk -workspace C:/g/hdmi_out/proj/hdmi_out.sdk -hwspec C:/g/hdmi_out/proj/hdmi_out.sdk/hdmi_out_wrapper.hdf
+startgroup
+set_property -dict [list CONFIG.ACTIVE_COLS {640} CONFIG.ACTIVE_ROWS {480}] [get_bd_cells v_rgb2ycrcb_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.ACTIVE_COLS {640} CONFIG.ACTIVE_ROWS {480} CONFIG.Standard_Sel {YUV} CONFIG.Output_Range {0_to_255_for_Computer_Graphics} CONFIG.ccoef {0.877283} CONFIG.dcoef {0.492111} CONFIG.rgbmax {255} CONFIG.rgbmin {0}] [get_bd_cells v_ycrcb2rgb_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.Standard_Sel {YUV} CONFIG.Output_Range {0_to_255_for_Computer_Graphics} CONFIG.ccoef {0.877283} CONFIG.dcoef {0.492111} CONFIG.ymax {255} CONFIG.cbmax {255} CONFIG.crmax {255} CONFIG.ymin {0} CONFIG.cbmin {0} CONFIG.crmin {0}] [get_bd_cells v_rgb2ycrcb_0]
+endgroup
+startgroup
+endgroup
+save_bd_design
+reset_target all [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd]
+export_ip_user_files -of_objects  [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -sync -no_script -force -quiet
+generate_target all [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd]
+export_ip_user_files -of_objects [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -no_script -force -quiet
+export_simulation -of_objects [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -directory C:/g/hdmi_out/proj/hdmi_out.ip_user_files/sim_scripts -force -quiet
+make_wrapper -files [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -top
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+file copy -force C:/g/hdmi_out/proj/hdmi_out.runs/impl_1/hdmi_out_wrapper.sysdef C:/g/hdmi_out/proj/hdmi_out.sdk/hdmi_out_wrapper.hdf
+
+launch_sdk -workspace C:/g/hdmi_out/proj/hdmi_out.sdk -hwspec C:/g/hdmi_out/proj/hdmi_out.sdk/hdmi_out_wrapper.hdf
+regenerate_bd_layout
+regenerate_bd_layout
+open_bd_design {C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd}
+delete_bd_objs [get_bd_intf_nets v_ycrcb2rgb_0_video_out]
+undo
+delete_bd_objs [get_bd_intf_nets v_ycrcb2rgb_0_video_out]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:inverse_color_v1_0:1.0 inverse_color_v1_0_0
+endgroup
+set_property location {3.5 920 837} [get_bd_cells inverse_color_v1_0_0]
+connect_bd_intf_net [get_bd_intf_pins v_ycrcb2rgb_0/video_out] [get_bd_intf_pins inverse_color_v1_0_0/s00_axis]
+connect_bd_intf_net [get_bd_intf_pins inverse_color_v1_0_0/m00_axis] [get_bd_intf_pins v_rgb2ycrcb_0/video_in]
+connect_bd_net [get_bd_pins inverse_color_v1_0_0/aclk] [get_bd_pins processing_system7_0/FCLK_CLK1]
+connect_bd_net [get_bd_pins inverse_color_v1_0_0/aclken] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins inverse_color_v1_0_0/aresetn] [get_bd_pins xlconstant_1/dout]
+regenerate_bd_layout
+save_bd_design
+reset_target all [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd]
+export_ip_user_files -of_objects  [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -sync -no_script -force -quiet
+generate_target all [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd]
+export_ip_user_files -of_objects [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -no_script -force -quiet
+export_simulation -of_objects [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -directory C:/g/hdmi_out/proj/hdmi_out.ip_user_files/sim_scripts -force -quiet
+startgroup
+set_property -dict [list CONFIG.C_S00_AXIS_TDATA_WIDTH {24} CONFIG.C_M00_AXIS_TDATA_WIDTH {24}] [get_bd_cells inverse_color_v1_0_0]
+endgroup
+delete_bd_objs [get_bd_intf_nets inverse_color_v1_0_0_m00_axis] [get_bd_intf_nets v_ycrcb2rgb_0_video_out] [get_bd_cells inverse_color_v1_0_0]
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:inverse_color_v1_0:1.0 inverse_color_v1_0_0
+endgroup
+set_property location {5 996 552} [get_bd_cells inverse_color_v1_0_0]
+connect_bd_intf_net [get_bd_intf_pins inverse_color_v1_0_0/m00_axis] [get_bd_intf_pins v_rgb2ycrcb_0/video_in]
+connect_bd_intf_net [get_bd_intf_pins v_ycrcb2rgb_0/video_out] [get_bd_intf_pins inverse_color_v1_0_0/s00_axis]
+connect_bd_net [get_bd_pins inverse_color_v1_0_0/aclk] [get_bd_pins processing_system7_0/FCLK_CLK1]
+connect_bd_net [get_bd_pins inverse_color_v1_0_0/aclken] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins inverse_color_v1_0_0/aresetn] [get_bd_pins xlconstant_1/dout]
+save_bd_design
+reset_target all [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd]
+export_ip_user_files -of_objects  [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -sync -no_script -force -quiet
+generate_target all [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd]
+export_ip_user_files -of_objects [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -no_script -force -quiet
+export_simulation -of_objects [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -directory C:/g/hdmi_out/proj/hdmi_out.ip_user_files/sim_scripts -force -quiet
+startgroup
+set_property -dict [list CONFIG.C_S00_AXIS_TDATA_WIDTH {24} CONFIG.C_M00_AXIS_TDATA_WIDTH {24}] [get_bd_cells inverse_color_v1_0_0]
+endgroup
+save_bd_design
+reset_target all [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd]
+export_ip_user_files -of_objects  [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -sync -no_script -force -quiet
+generate_target all [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd]
+export_ip_user_files -of_objects [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -no_script -force -quiet
+export_simulation -of_objects [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -directory C:/g/hdmi_out/proj/hdmi_out.ip_user_files/sim_scripts -force -quiet
+make_wrapper -files [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -top
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+file copy -force C:/g/hdmi_out/proj/hdmi_out.runs/impl_1/hdmi_out_wrapper.sysdef C:/g/hdmi_out/proj/hdmi_out.sdk/hdmi_out_wrapper.hdf
+
+launch_sdk -workspace C:/g/hdmi_out/proj/hdmi_out.sdk -hwspec C:/g/hdmi_out/proj/hdmi_out.sdk/hdmi_out_wrapper.hdf
+file copy -force C:/g/hdmi_out/proj/hdmi_out.runs/impl_1/hdmi_out_wrapper.sysdef C:/g/hdmi_out/proj/hdmi_out.sdk/hdmi_out_wrapper.hdf
+
+launch_sdk -workspace C:/g/hdmi_out/proj/hdmi_out.sdk -hwspec C:/g/hdmi_out/proj/hdmi_out.sdk/hdmi_out_wrapper.hdf
+open_bd_design {C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd}
+open_bd_design {C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd}
+delete_bd_objs [get_bd_intf_nets v_ycrcb2rgb_0_video_out] [get_bd_intf_nets myip_test1_v1_0_0_m00_axis] [get_bd_cells v_ycrcb2rgb_0]
+connect_bd_intf_net [get_bd_intf_pins myip_test1_v1_0_0/m00_axis] [get_bd_intf_pins inverse_color_v1_0_0/s00_axis]
+delete_bd_objs [get_bd_intf_nets v_rgb2ycrcb_0_video_out] [get_bd_intf_nets inverse_color_v1_0_0_m00_axis] [get_bd_cells v_rgb2ycrcb_0]
+connect_bd_intf_net [get_bd_intf_pins inverse_color_v1_0_0/m00_axis] [get_bd_intf_pins v_axi4s_vid_out_0/video_in]
+save_bd_design
+reset_target all [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd]
+export_ip_user_files -of_objects  [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -sync -no_script -force -quiet
+generate_target all [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd]
+export_ip_user_files -of_objects [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -no_script -force -quiet
+export_simulation -of_objects [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -directory C:/g/hdmi_out/proj/hdmi_out.ip_user_files/sim_scripts -force -quiet
+make_wrapper -files [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -top
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+file copy -force C:/g/hdmi_out/proj/hdmi_out.runs/impl_1/hdmi_out_wrapper.sysdef C:/g/hdmi_out/proj/hdmi_out.sdk/hdmi_out_wrapper.hdf
+
+launch_sdk -workspace C:/g/hdmi_out/proj/hdmi_out.sdk -hwspec C:/g/hdmi_out/proj/hdmi_out.sdk/hdmi_out_wrapper.hdf
+delete_bd_objs [get_bd_intf_nets inverse_color_v1_0_0_m00_axis] [get_bd_intf_nets myip_test1_v1_0_0_m00_axis] [get_bd_cells inverse_color_v1_0_0]
+set_property location {3 638 477} [get_bd_cells myip_test1_v1_0_0]
+connect_bd_intf_net [get_bd_intf_pins myip_test1_v1_0_0/m00_axis] [get_bd_intf_pins v_axi4s_vid_out_0/video_in]
+reset_target all [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd]
+export_ip_user_files -of_objects  [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -sync -no_script -force -quiet
+generate_target all [get_files  C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd]
+export_ip_user_files -of_objects [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -no_script -force -quiet
+export_simulation -of_objects [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -directory C:/g/hdmi_out/proj/hdmi_out.ip_user_files/sim_scripts -force -quiet
+make_wrapper -files [get_files C:/g/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/hdmi_out.bd] -top
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+file copy -force C:/g/hdmi_out/proj/hdmi_out.runs/impl_1/hdmi_out_wrapper.sysdef C:/g/hdmi_out/proj/hdmi_out.sdk/hdmi_out_wrapper.hdf
+
+launch_sdk -workspace C:/g/hdmi_out/proj/hdmi_out.sdk -hwspec C:/g/hdmi_out/proj/hdmi_out.sdk/hdmi_out_wrapper.hdf

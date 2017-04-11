@@ -1,0 +1,6 @@
+09:45:58 **** Build of project displaydemo_bsp ****
+make -k all 
+'Finished building libraries'
+
+09:45:58 Build Finished (took 151ms)
+

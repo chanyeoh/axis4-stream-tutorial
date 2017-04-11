@@ -1,0 +1,34 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Mon Apr 10 08:21:08 2017
+# Process ID: 4880
+# Current directory: C:/axis_tut/ip_repo/inverse_color_new_1.0
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8324 C:\axis_tut\ip_repo\inverse_color_new_1.0\tmp_edit_project.xpr
+# Log file: C:/axis_tut/ip_repo/inverse_color_new_1.0/vivado.log
+# Journal file: C:/axis_tut/ip_repo/inverse_color_new_1.0\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/axis_tut/ip_repo/inverse_color_new_1.0/tmp_edit_project.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory 'C:/axis_tut/ip_repo/inverse_color_1.0'.
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory 'C:/axis_tut/ip_repo/inverse_color_1.0'.
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory 'C:/axis_tut/ip_repo/inverse_color_1.0'.
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'C:/axis_tut/ip_repo/inverse_color_new_1.0/tmp_edit_project.ip_user_files'.
+WARNING: [filemgmt 56-3] IPStaticSourceDir: Could not find the directory 'C:/axis_tut/ip_repo/inverse_color_new_1.0/tmp_edit_project.ip_user_files/ipstatic'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/axis_tut/ip_repo/inverse_color_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/axis_tut/ip_repo/inverse_color_new_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'c:/axis_tut/ip_repo/inverse_color_1.0' already exists; ignoring attempt to add it again.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/axis_tut/ip_repo/inverse_color_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-2207] Repository 'c:/axis_tut/ip_repo/inverse_color_1.0' already exists; ignoring attempt to add it again.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/axis_tut/ip_repo/inverse_color_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.4/data/ip'.
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 784.988 ; gain = 215.242
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 10 08:21:56 2017...

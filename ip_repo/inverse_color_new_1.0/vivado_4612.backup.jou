@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Mon Apr 10 18:00:35 2017
+# Process ID: 4612
+# Current directory: C:/axis_tut/ip_repo/inverse_color_new_1.0
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7588 C:\axis_tut\ip_repo\inverse_color_new_1.0\tmp_edit_project.xpr
+# Log file: C:/axis_tut/ip_repo/inverse_color_new_1.0/vivado.log
+# Journal file: C:/axis_tut/ip_repo/inverse_color_new_1.0\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/axis_tut/ip_repo/inverse_color_new_1.0/tmp_edit_project.xpr

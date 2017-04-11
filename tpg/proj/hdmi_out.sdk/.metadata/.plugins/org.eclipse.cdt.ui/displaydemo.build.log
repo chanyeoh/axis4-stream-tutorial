@@ -1,0 +1,14 @@
+07:26:33 **** Incremental Build of configuration Debug for project displaydemo ****
+make all 
+'Building file: ../src/timer_ps/timer_ps.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/timer_ps/timer_ps.o" -I../../displaydemo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/timer_ps/timer_ps.d" -MT"src/timer_ps/timer_ps.d" -o "src/timer_ps/timer_ps.o" "../src/timer_ps/timer_ps.c"
+In file included from ../src/timer_ps/timer_ps.c:29:0:
+../src/timer_ps/timer_ps.h:27:23: fatal error: xil_types.h: No such file or directory
+ #include "xil_types.h"
+                       ^
+compilation terminated.
+make: *** [src/timer_ps/timer_ps.o] Error 1
+
+07:26:33 Build Finished (took 406ms)
+

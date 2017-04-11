@@ -1,0 +1,393 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Mon Apr 10 17:35:30 2017
+# Process ID: 10548
+# Current directory: C:/axis_tut/ip_repo/inverse_color_new_1.0/tmp_edit_project.runs/synth_1
+# Command line: vivado.exe -log inverse_color_v1_0.vds -mode batch -messageDb vivado.pb -notrace -source inverse_color_v1_0.tcl
+# Log file: C:/axis_tut/ip_repo/inverse_color_new_1.0/tmp_edit_project.runs/synth_1/inverse_color_v1_0.vds
+# Journal file: C:/axis_tut/ip_repo/inverse_color_new_1.0/tmp_edit_project.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source inverse_color_v1_0.tcl -notrace
+Command: synth_design -top inverse_color_v1_0 -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 290.219 ; gain = 118.465
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'inverse_color_v1_0' [C:/axis_tut/ip_repo/inverse_color_new_1.0/src/inverse_color_v1_0.vhd:38]
+	Parameter WIDTH bound to: 640 - type: integer 
+	Parameter HEIGHT bound to: 480 - type: integer 
+	Parameter MAX_FIFO bound to: 20 - type: integer 
+	Parameter C_S00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+WARNING: [Synth 8-614] signal 'aresetn' is read in the process but is not in the sensitivity list [C:/axis_tut/ip_repo/inverse_color_new_1.0/src/inverse_color_v1_0.vhd:58]
+WARNING: [Synth 8-614] signal 'aclken' is read in the process but is not in the sensitivity list [C:/axis_tut/ip_repo/inverse_color_new_1.0/src/inverse_color_v1_0.vhd:58]
+INFO: [Synth 8-256] done synthesizing module 'inverse_color_v1_0' (1#1) [C:/axis_tut/ip_repo/inverse_color_new_1.0/src/inverse_color_v1_0.vhd:38]
+WARNING: [Synth 8-3331] design inverse_color_v1_0 has unconnected port s00_axis_tlast
+WARNING: [Synth 8-3331] design inverse_color_v1_0 has unconnected port s00_axis_tuser
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 326.508 ; gain = 154.754
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 326.508 ; gain = 154.754
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 326.508 ; gain = 154.754
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-5545] ROM "width_count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "height_count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "height_count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_operation" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_operation" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 373.797 ; gain = 202.043
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 4     
++---Registers : 
+	              640 Bit    Registers := 1     
+	               32 Bit    Registers := 4     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input    640 Bit        Muxes := 2     
+	   2 Input    608 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input     24 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 4     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module inverse_color_v1_0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 4     
++---Registers : 
+	              640 Bit    Registers := 1     
+	               32 Bit    Registers := 4     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input    640 Bit        Muxes := 2     
+	   2 Input    608 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input     24 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 4     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 477.000 ; gain = 305.246
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "width_count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "height_count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "height_count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_operation" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "state_operation" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-3331] design inverse_color_v1_0 has unconnected port s00_axis_tlast
+WARNING: [Synth 8-3331] design inverse_color_v1_0 has unconnected port s00_axis_tuser
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 477.246 ; gain = 305.492
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 477.246 ; gain = 305.492
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[639] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[638] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[637] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[636] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[635] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[634] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[633] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[632] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[607] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[606] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[605] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[604] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[603] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[602] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[601] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[600] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[575] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[574] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[573] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[572] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[571] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[570] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[569] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[568] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[543] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[542] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[541] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[540] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[539] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[538] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[537] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[536] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[511] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[510] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[509] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[508] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[507] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[506] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[505] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[504] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[479] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[478] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[477] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[476] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[475] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[474] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[473] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[472] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[447] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[446] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[445] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[444] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[443] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[442] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[441] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[440] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[415] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[414] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[413] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[412] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[411] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[410] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[409] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[408] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[383] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[382] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[381] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[380] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[379] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[378] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[377] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[376] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[351] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[350] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[349] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[348] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[347] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[346] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[345] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[344] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[319] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[318] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[317] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[316] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[315] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[314] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[313] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[312] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[287] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[286] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[285] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[284] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[283] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[282] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[281] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[280] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[255] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[254] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[253] ) is unused and will be removed from module inverse_color_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\fifo_data_reg[252] ) is unused and will be removed from module inverse_color_v1_0.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\state_operation_reg[1] )
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 527.023 ; gain = 355.270
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 527.023 ; gain = 355.270
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 527.023 ; gain = 355.270
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 527.023 ; gain = 355.270
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 527.023 ; gain = 355.270
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 527.023 ; gain = 355.270
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 527.023 ; gain = 355.270
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 527.023 ; gain = 355.270
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 527.023 ; gain = 355.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 527.023 ; gain = 355.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 527.023 ; gain = 355.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 527.023 ; gain = 355.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    44|
+|3     |LUT1   |    93|
+|4     |LUT2   |    42|
+|5     |LUT3   |   168|
+|6     |LUT4   |    81|
+|7     |LUT5   |   199|
+|8     |LUT6   |   768|
+|9     |FDRE   |   612|
+|10    |IBUF   |    37|
+|11    |OBUF   |    36|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |  2081|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 527.023 ; gain = 355.270
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 171 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 527.023 ; gain = 310.977
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 527.023 ; gain = 355.270
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 81 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'inverse_color_v1_0' is not ideal for floorplanning, since the cellview 'inverse_color_v1_0' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+23 Infos, 107 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 569.180 ; gain = 359.348
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 569.180 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 10 17:35:57 2017...
